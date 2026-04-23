@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Identity Cipher</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>🔐 Student Identity Cipher</h1>
+  <p class="subtitle">Encrypt & Decrypt your identity</p>
+
+  <div class="grid">
+
+    <!-- INPUT -->
+    <div class="card">
+      <h2>Input</h2>
+
+      <label>Full Name</label>
+      <input type="text" id="name">
+
+      <label>Year Level</label>
+      <input type="text" id="year">
+
+      <label>Course</label>
+      <input type="text" id="course">
+
+      <label>Key Shift(1–25)</label>
+      <input type="number" id="key" min="1" max="25">
+
+      <div class="buttons">
+        <button class="encrypt" onclick="encrypt()">Encrypt</button>
+        <button class="decrypt" onclick="decrypt()">Decrypt</button>
+        <button class="undo" onclick="undoAll()">Undo All</button>
+      </div>
+
+      <p id="error"></p>
+    </div>
+
+    <!-- OUTPUT -->
+    <div class="card result-card">
+      <h2>🔎 Cipher Output</h2>
+
+      <div class="result-grid">
+
+        <div class="result-item">
+          <div class="tag">INPUT DATA</div>
+          <p id="plaintext" class="big-text empty">Waiting for input...</p>
+        </div>
+
+        <div class="arrow">⬇</div>
+
+        <div class="result-item highlight">
+          <div class="tag">ENCRYPTED / DECRYPTED</div>
+          <p id="result" class="big-text empty">Result will appear here</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
